@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite OpenLayers App</title>
+  </head>
+  <body>
+    <div id="bigNumbers" class="big-numbers">
+      <div class="number-box">
+          <h3>Clientes</h3>
+          <p id="totalClients">0</p>
+      </div>
+      <div class="number-box">
+          <h3>Mercado</h3>
+          <p id="totalMarket">0</p>
+      </div>
+    </div>
+    <div class="filters">
+      <h3>Filtros</h3>
+      <label for="uf">UF:</label>
+      <select id="uf">
+        <option value="">Todos UFs</option>
+        <option value="AC">AC</option>
+        <option value="AL">AL</option>
+        <option value="AM">AM</option>
+        <option value="AP">AP</option>
+        <option value="BA">BA</option>
+        <option value="CE">CE</option>
+        <option value="DF">DF</option>
+        <option value="ES">ES</option>
+        <option value="GO">GO</option>
+        <option value="MA">MA</option>
+        <option value="MG">MG</option>
+        <option value="MS">MS</option>
+        <option value="MT">MT</option>
+        <option value="PA">PA</option>
+        <option value="PB">PB</option>
+        <option value="PE">PE</option>
+        <option value="PI">PI</option>
+        <option value="PR">PR</option>
+        <option value="RJ">RJ</option>
+        <option value="RN">RN</option>
+        <option value="RO">RO</option>
+        <option value="RR">RR</option>
+        <option value="RS">RS</option>
+        <option value="SC">SC</option>
+        <option value="SE">SE</option>
+        <option value="SP">SP</option>
+        <option value="TO">TO</option>
+      </select>
+      <br><br>
+      <label for="city">Município:</label>
+      <select id="city" disabled>
+        <option value="">Todos os muncípios</option>
+      </select>
+    </div>
+
+    <div id="map-legend" class="legend">
+      <div class="legend-item">
+        <span class="legend-circle mercado"></span>
+        <span>Mercado</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-circle cliente"></span>
+        <span>Cliente</span>
+      </div>
+    </div>
+
+    <div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-content"></div>
+    </div>
+
+    <div id="map" style="width: 100%; height: 100vh;"></div>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
